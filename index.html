@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f2f2f2;        
+            font-size: 12px;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+        }
+        .tCenter {
+            text-align: center;
+            
+        }
+        #age {
+            color: rgb(31, 66, 31)
+        }
+        .below {
+            text-align: center;
+        }
+        .btn-submit { 
+        outline: none;
+        border: none;
+        background-color:  #f2f2f2;
+        font-size: 15px;
+        width: 100%;
+        height: 29px;
+        border-radius: 3px;
+        box-shadow: 2px 2px 2px 2px #ccc;
+        }
+
+        .btn-submit:hover {
+        cursor: pointer;
+        }
+
+        /* id is hashtag class is dot(.) */
+    </style>
+</head>
+<body>
+    <h2 class="tCenter">ARATS INPUT NA</h2> 
+
+    <div class="container">
+        <div style="margin-right: 25px; background-color: rgb(255, 255, 255); padding: 15px; border-radius: 8px; border:1px solid #d9d9d9; box-shadow: 3px 3px 5px 6px #ccc;">
+            <label> First Name: <input id="firstname" type="text"></label>
+            <br><br>
+            <label> Last Name: <input id="lastname" type="text"></label>
+            <br><br>
+            <label> Age: <input id="age" type="number"></label>
+            <br><br>
+            <label> Motto: <input id="motto" type="text"></label>
+            <br><br>
+            <label for="photo">Add Photo:</label>
+            <input type="file" accept="image/*" onchange="tempImg(event)">
+            <br><br>
+    
+            <button class = "btn-submit" onclick="submit()">Submit</button>
+        </div>
+        <div class = "below">
+            <img id="output_image" style="width: auto; height: 250px; border-radius: 8px;" />
+            <p id="FN"></p>
+            <p id="LN"></p>
+            <p id="A"></p>
+            <p id="age-status"></p>
+            <p id="M"></p>
+        </div>
+    </div>
+<script src="index.js"></script>
+</body>
+</html>
